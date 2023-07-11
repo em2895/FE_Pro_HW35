@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="header"><h2>Internet Shop</h2></div>
+    <div><h3>Categories</h3></div>
+    <table style="width: 600px">
+        <tr>
+            <td><div class="categories_container"></div></td>
+            <td><div class="products_container">Products</div></td>
+            <td><div class="product-detail_container">
+                Detail
+                <button class="btn_buy">Buy</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div class="orderForm" style="display: none">
+        <h2>Checkout</h2>
+        <form id="myForm">
+          <label for="username">Full name:</label>
+          <input type="text" name="username" id="username" required />
+          <br />
+          <label for="city">City:</label>
+          <select name="city" id="city" required>
+            <option value="Kyiv">Kyiv</option>
+            <option value="Kharkiv">Kharkiv</option>
+            <option value="Poltava">Poltava</option>
+            <option value="Dnipro" selected>Dnipro</option>
+            <option value="Zaporizha">Zaporizha</option>
+            <option value="Mykolaiv">Mykolaiv</option>
+            <option value="Odessa">Odessa</option>
+            <option value="Vinnitsa">Vinnitsa</option>
+            <option value="Lviv">Lviv</option>
+            <option value="Lutsk">Lutsk</option>
+          </select>
+          <br />
+          <label for="post-office">Department of Nova Poshta:</label>
+          <input type="text" name="post-office" id="post-office" required />
+          <br />
+          <label for="payment-method">Payment method:</label>
+          <select id="payment-method" name="payment-method" required>
+            <option value="postpaid">Postpaid</option>
+            <option value="credit_card">Credit card</option>
+          </select>
+          <br />
+          <label for="quantity">Quantity:</label>
+          <input
+            type="number"
+            id="quantity"
+            name="quantity"
+            min="1"
+            max="100"
+            value="1"
+            required
+          />
+          <br />
+          <label for="comment">Comment on the order:</label>
+          <textarea id="comment" name="comment" rows="4" cols="40"></textarea>
+          <br />
+          <button type="submit" id="submit">Confirm order</button>
+        </form>
+      </div>
+      <br />
+      <table id="dataTable" border = "2px" style="display: none">
+        <thead>
+          <tr>
+           <th>Full name</th>
+           <th>City</th>
+           <th>Department of NP</th>
+           <th>Payment method</th>
+           <th>Quantity</th>
+           <th>Comment on the order</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody">
+        </tbody>
+       </table>
+    <script src="script.js"></script>
+
+</body>
+</html>
